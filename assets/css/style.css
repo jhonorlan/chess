@@ -1,0 +1,106 @@
+* {
+  margin: 0;
+}
+
+body {
+  background: #312E2B;
+  margin: 0;
+}
+
+.chessboard {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-top: 15px;
+}
+
+.chessboard .chessboard-content {
+  width: 600px;
+  height: 600px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  border-radius: 10px;
+}
+
+.chessboard .chessboard-content .chess-row:nth-child(1) .square:first-child {
+  border-top-left-radius: 10px;
+}
+
+.chessboard .chessboard-content .chess-row:nth-child(1) .square:last-child {
+  border-bottom-left-radius: 10px;
+}
+
+.chessboard .chessboard-content .chess-row:last-child .square:first-child {
+  border-top-right-radius: 10px;
+}
+
+.chessboard .chessboard-content .chess-row:last-child .square:last-child {
+  border-bottom-right-radius: 10px;
+}
+
+.chessboard .chessboard-content .chess-row .square {
+  min-width: 75px;
+  min-height: 75px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.chessboard .chessboard-content .chess-row .square.white-square {
+  background: #EBECD0;
+}
+
+.chessboard .chessboard-content .chess-row .square.black-square {
+  background: #779556;
+}
+
+.chessboard .chessboard-content .chess-row .square img {
+  width: 50px;
+  cursor: pointer;
+  -webkit-transition: 1s;
+  transition: 1s;
+}
+
+.chessboard .chessboard-content .chess-row .square .circle {
+  width: 20px;
+  height: 20px;
+  background: #000000;
+  position: absolute;
+  border-radius: 50%;
+  opacity: 0.20;
+  visibility: hidden;
+}
+
+.chessboard .chessboard-content .chess-row .square.selected {
+  background: #BACB2B;
+}
+
+.chessboard .chessboard-content .chess-row .square.possible-move {
+  cursor: pointer;
+}
+
+.chessboard .chessboard-content .chess-row .square.possible-move .circle {
+  visibility: visible;
+}
+
+.chessboard .chessboard-content .chess-row .square.possible-enemy {
+  cursor: pointer;
+}
+/*# sourceMappingURL=style.css.map */
